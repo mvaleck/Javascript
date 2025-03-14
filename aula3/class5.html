@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div#area{
+            font: normal 20pt Arial;
+            background-color: cadetblue;
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="area">
+        Interaga...
+    </div>
+    
+
+    <script>
+       var a = document.getElementById('area') //acessando o elemento area pelo docuemnt e pelo ID 
+       a.addEventListener('click', clicar) //a é a variável que guarda o dado do html, assim nela adiconamos o evento de clicar
+       a.addEventListener('mouseenter', entrar) //add evento de quando o mouse "entra"
+       a.addEventListener('mouseout', sair) //evento de quando o mouse sai do elemento
+       a.addEventListener('mousedown', pressionando) //evento de quando o mouse pressiona o click
+
+       function clicar() {
+        a.innerText = "Clicou!" // innerText serve para acessar ou altera o texto visivel dentro de um elemento html
+        a.style.background = "red"        
+       }
+
+       function entrar () {
+        a.innerText = "Entrou"
+        a.style.background = "blue" 
+       }
+
+       function sair () {
+        a.innerText = "Saiu"
+        a.style.background = "yellow"
+       }
+
+       function pressionando() {
+        a.innerText = "clicando"
+        a.style.background = "green"
+       }
+
+       /*
+       -Outras observações: innerHTML serve para acessar ou alterar elementos html dentro de um container.
+       -Propriedade style permite acessar ou modificar diretamente os estiloss css de um elemento. exemplo: variavel.style.color = "red", variavel.style.width ="20px".......
+
+       - function nomeDaFunction (parametro) {
+            código a ser executado
+       } 
+       é um bloco de código que serve para realizar tarefas específicas 
+       para executar uma função é necessário chama-lá pelo NOME
+       
+       */
+
+
+    </script>
+
+    
+</body>
+</html>

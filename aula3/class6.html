@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 6</title>
+
+    <style>
+        body {
+            background-color: #fee4ec;
+            color: rgb(114, 7, 78);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            font-size: 30px;
+            font-family: Arial, Helvetica, sans-serif
+        }
+
+        input {
+            border-radius: 20px;
+            border-style: none;
+            padding: 10px;
+            margin: 15px;
+        }
+
+        
+        
+    </style>
+
+</head>
+<body>
+
+    <h3>Somando Valores</h3>
+    <input type="number" name="txtn1" id="txtn1"> +
+    <input type="number" name="txtn2" id="txtn2">
+    <input type="button" value="Somar" onclick="somar()">
+    
+    <div id="res">Resultado</div>
+
+    <script>
+        function somar() {
+            var tn1 = document.getElementById('txtn1')
+            var tn2 = document.querySelector('input#txtn2') // pode usar getElemented ou querySelector 
+            var res = document.getElementById('res')
+            var n1 = Number.parseInt (tn1.value) // pode ser desse jeito ou do de baixo... 
+            var n2 = Number(tn2.value) //converte pra numero pois tudo que é escrito em caixa de texto é string então tem que converter
+          // sem conversão ele IRIA CONCATENAR, ou seja, 5+5= resultado 55 e não 10
+        
+            var s = n1 + n2
+
+            res.innerHTML = `A soma dos valores é ${s}` //res.innerHTML altera o texto do elemento html após a função ser executada
+            
+        }
+
+    </script>
+
+
+</body>
+</html>

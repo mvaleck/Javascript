@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula Guanabara</title>
+</head>
+<body>
+    <h2>Olá mundo</h2>
+    <p>Aula do Guanabara</p>
+    
+    <script>
+
+        var n1 = prompt('Digite um número') //string
+        var n2 = prompt('Digite outro número') //string
+        var soma = n1 + n2
+        alert('Você digitou ' + n1 + ' e ' + n2 + ' e a soma deste números é: ' + soma) // a soma está dando errado pq o js entende que a soma é concatenação (string), precisa converter
+
+        var n3 = Number(prompt('Digite um número'))//para converter string p. numero usar Number () ou Number.parseInt() ou Number.parseFloat()
+        var n4 = Number.parseInt(prompt('Digite outro número')) //convertido p. numero int
+        var soma2 = n3 + n4
+        alert('Você digitou ' + n3 + ' e ' + n4 + ' e a soma deste números é: ' + soma2) //CONCATENAÇÃO
+        alert(`a soma é ${soma2}`) //Template String, so funciona com CRASE
+
+    </script>
+
+</body>
+</html>

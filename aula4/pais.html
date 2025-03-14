@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>País</title>
+</head>
+
+<style>
+    body {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+.estilo{
+    background-color: rgb(224, 224, 224);
+    display: flexbox;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding: 100px;
+    margin: 30px;
+font-family: Arial, Helvetica, sans-serif;    
+}
+h4{
+    font-size: 40px;
+}
+</style>
+
+<body>
+    
+<div class="estilo">
+
+    <H4>De qual país você é?</H4>
+    <input type="text" name="txtP" id="pais">
+    <input type="button" value="ok" onclick="clicou()">
+    <div id="res"></div>
+
+ </div>
+    
+
+<script>
+
+    function clicou() {
+        var txt1 = document.querySelector('input#pais').value
+        /*.value → Retorna ou define o conteúdo digitado no <input>. 
+        Sem .value, você pega o elemento HTML inteiro, não o texto digitado.*/
+
+        var res = document.querySelector('div#res')
+
+        res.innerHTML = `<br> Seu país é o(a) ${txt1}`
+
+        if (txt1.toLowerCase()=== "brasil") { 
+            /*Converte o texto para minúsculas.
+            isso evita erro caso o usuário digite "BRASIL", "Brasil", "braSil", etc.*/
+        res.innerHTML += "<p>Você é Brasileiro</p>"
+
+    } else {
+        res.innerHTML += "<p>Você é Estrangeiro</p>"
+    }
+
+    }
+
+</script>
+
+</body>
+</html>
